@@ -52,7 +52,7 @@ public class Networking extends ApplicationAdapter
 					{
 						endDialog.show(stage);
 					}
-				}, 1);
+				}, 2);
 			};
 		};
 		endDialog.setSize(800, 600); // Set the width and height of the Dialog
@@ -78,8 +78,9 @@ public class Networking extends ApplicationAdapter
 				// Extract the "text" field
 				String text = jsonValue.getString("text");
 
+				endDialog.text("Verse in log");
 				// Print the text to the console
-				Log.info("Verse: " + text);
+				Gdx.app.log("Networking", "Verse: " + text);
 				System.out.println("Text: " + text);
 				}
 
